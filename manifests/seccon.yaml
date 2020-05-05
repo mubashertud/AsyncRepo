@@ -16,22 +16,23 @@ spec:
 ---
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: seccon-deployment
-spec:
+spec: 
   replicas: 1
-  selector:
-    matchLabels:
+  selector: 
+    matchLabels: 
       app: seccon
-  template:
-    metadata:
-      labels:
+  template: 
+    metadata: 
+      labels: 
         app: seccon
-    spec:
-      containers:
-        - name: seccon
-          image: <your docker hub name>/seccon:v1
-          args: ["redis-service:6379", "2000", "50", "door1"]
-          ports:
-          - containerPort: 8080	  
-   
+    spec: 
+      containers: 
+        - 
+          args: ["redis-service:6379", "2000", "50",  "door1", "door2", "door3"]
+          image: "mubasherm/seccon:v1"
+          name: seccon
+          ports: 
+            - 
+              containerPort: 8080

@@ -15,4 +15,4 @@ spec:
       containers:
         - name: door1
           args: ["1", "10", "redis-service:6379"]
-          image: <your docker hub name>/door:v1
+          image: mubasherm/door1:v1
